@@ -117,9 +117,9 @@ After initial exploratory analysis of the data, I decided to only include the mo
 Due to the maintenance nature of these datasets, some colleges no longer have all the information listed above, therefore, some institutions will be removed during the data cleaning step due to NULL data values.
 
 
-### Repoducibility
+### Reproducibility
 
-All datasets used for this analysis are static datasets hosted on the U.S. Department of Education website (retrivable via links provided above). Developers can also use API calls to retrieve the same datasets.
+All datasets used for this analysis are static datasets hosted on the U.S. Department of Education website (retrievable via links provided above). Developers can also use API calls to retrieve the same datasets.
 
 	The College Scorecard API is a GET API that lives at http://api.data.gov/ed/collegescorecard/
 	The endpoint for querying all data is /v1/schools
@@ -131,23 +131,37 @@ All datasets used for this analysis are static datasets hosted on the U.S. Depar
 
 ## Project Plan
 
-### Research Questions and Potential Results
+### Research Questions and Hypotheses
 
 Both College Scorecard Data and Post-school Earnings will be used separately and jointly to answer the below research questions:
 
-* Segment cost of enrollment by city and by region, are there regional trend for higher average cost of enrollment and what are potential implications behind the regional cost difference, how would that affect education accessibility?
+* Segment cost of enrollment by city and by region, are there regional distinctions of average cost of enrollment, what are potential implications behind the regional cost differences, and how would that affect education accessibility?
 
-	Based on population density
-	
-* How do racial diversity change by different regions and different types of colleges(public vs. private)?
+	It is reasonable to expect different number of colleges available in different regions due to population density, but it is hard to assume a trend for average cost of enrollment. I expect to find informative results from the regional segmentation of cost and find links to historical background and economic states of each region.
 
+* How does racial diversity change by different regions and different types of colleges (public vs. private)?
+
+	The null hypothesis for this research question is no difference across regions and by different types of colleges, but due to historical reasons, there will probably be more diverse population on coasts and less diversity in the mid-region. I will conduct sample tests to validate the hypotheses.
+
+* What are factors for higher post-school earnings?
+
+	I expect admission considerations, and cost of enrollment to be the main indicators of post-school earnings. I will use regression models to test the assumptions.
 
 ### Human Centered Design Considerations
 
+College admission process is known to be prune to bias, and currently all the final admission decisions are still made by human with potential machine generated suggestions. I want to use this data to explore the implications of bias in these decisions and how that affect post-school earnings on the school, state and region level. The subject matter of college education is centered around human and have many human centered implications.
 
 ### Unknowns and Dependencies
 
-The understanding and interpretation of correlation between tuition and earnings is very complex and sometimes subjective, there are factors like high cost of living that could cause both variables to increase or decrease simultanously. We will not be incorporating living expense and regional dependencies in the analysis, and these factors will remain unknowns to this particular project scope.
+The understanding and interpretation of correlation between tuition and earnings is very complex and sometimes subjective, there are factors like high cost of living that could cause both variables to increase or decrease simultaneously. We will not be incorporating living expense and regional dependencies in the analysis, and these factors will remain unknowns to this particular project scope.
+
+
+## Additional Resources
+
+* https://collegescorecard.ed.gov/data/
+* https://collegescorecard.ed.gov/data/documentation/
+* https://collegescorecard.ed.gov
+* https://www.brookings.edu/research/using-earnings-data-to-rank-colleges-a-value-added-approach-updated-with-college-scorecard-data/
 
 
 
