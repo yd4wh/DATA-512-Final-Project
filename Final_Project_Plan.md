@@ -82,7 +82,7 @@ Cleaned version of College Scorecard Data will include the following schema:
 
 #### 2017 Post-school Earnings
 
-The post-school earnings dataset include comprehensive measures of employment and earnings data subgrouped into 10, 8, 7 and 6 years after entry into the insititution, for this analysis, we will keep 10 years and 6 years after entry for a time length comparison.
+The post-school earnings dataset includes comprehensive measures of employment and earnings data sub grouped into 10, 8, 7 and 6 years after entry into the institution, for this analysis, we will keep 10 years and 6 years after entry for a time length comparison.
 
 Cleaned version of Post-school Earnings Data will include the following schema:
 
@@ -119,7 +119,7 @@ Due to the maintenance nature of these datasets, some colleges no longer have al
 
 ### Repoducibility
 
-All datasets used for this analysis are static datasets hosted on the U.S. Department of Education website(retrivable via links provided above). Developers can also use API calls to retrieve the same datasets.
+All datasets used for this analysis are static datasets hosted on the U.S. Department of Education website (retrivable via links provided above). Developers can also use API calls to retrieve the same datasets.
 
 	The College Scorecard API is a GET API that lives at http://api.data.gov/ed/collegescorecard/
 	The endpoint for querying all data is /v1/schools
@@ -131,10 +131,15 @@ All datasets used for this analysis are static datasets hosted on the U.S. Depar
 
 ## Project Plan
 
-### Research Questions
+### Research Questions and Potential Results
 
+Both College Scorecard Data and Post-school Earnings will be used separately and jointly to answer the below research questions:
 
-### Anticipated Results
+* Segment cost of enrollment by city and by region, are there regional trend for higher average cost of enrollment and what are potential implications behind the regional cost difference, how would that affect education accessibility?
+
+	Based on population density
+	
+* How do racial diversity change by different regions and different types of colleges(public vs. private)?
 
 
 ### Human Centered Design Considerations
