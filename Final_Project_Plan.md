@@ -13,7 +13,7 @@ This project uses [College Scorecard Data](https://collegescorecard.ed.gov/data/
 
 ## Background
 
-During the Obama administration, one of his [initiative](https://obamawhitehouse.archives.gov/issues/education/higher-education) was to provide more transparency to higher education. One of the goals of this initiative was to link federal funding to performance after graduation. A by-product of this initiative was the release of previously unavailable information like average family income of students, completion metrics and student earnings data through the U.S. Department of Education of a dataset called [College Scorecard Data](https://collegescorecard.ed.gov/data/). 
+During the Obama administration, one of his [initiatives](https://obamawhitehouse.archives.gov/issues/education/higher-education) was to provide more transparency to higher education. One of the goals of this initiative was to link federal funding to performance after graduation. A by-product of this initiative was the release of previously unavailable information like average family income of students, completion metrics and student earnings data through the U.S. Department of Education of a dataset called [College Scorecard Data](https://collegescorecard.ed.gov/data/). 
 
 The release of this dataset enabled us to compare the outcomes of colleges across states and regions, across types of ownerships, and across different admissions criteria. It also enabled us to analyze different aspects of diversity among colleges, such as racial diversity and programs offered diversity. 
 
@@ -82,7 +82,7 @@ Cleaned version of College Scorecard Data will include the following schema:
 
 #### 2017 Post-school Earnings
 
-The post-school earnings dataset include comprehensive measures of employment and earnings data subgrouped into 10, 8, 7 and 6 years after entry into the insititution, for our analysis, we will keep 10 years and 6 years after entry for a time length comparison.
+The post-school earnings dataset include comprehensive measures of employment and earnings data subgrouped into 10, 8, 7 and 6 years after entry into the insititution, for this analysis, we will keep 10 years and 6 years after entry for a time length comparison.
 
 Cleaned version of Post-school Earnings Data will include the following schema:
 
@@ -110,8 +110,23 @@ Cleaned version of Post-school Earnings Data will include the following schema:
 | SD_EARN_WNE_P6     | integer   | earnings | Standard deviation of earnings of students working and not enrolled 6 years after entry  |
 
 
+### Potential Data Limitation
+
+After initial exploratory analysis of the data, I decided to only include the most recent year's data into my analysis. However, in the [main data download page](https://collegescorecard.ed.gov/data/), users can download raw data as far back as 1997. Since this analysis will not be focusing on time series trend change of College Scorecard data, I will not be including historical data, but the same analysis can be applied to previous years as well. 
+
+Due to the maintenance nature of these datasets, some colleges no longer have all the information listed above, therefore, some institutions will be removed during the data cleaning step due to NULL data values.
+
+
 ### Repoducibility
 
+All datasets used for this analysis are static datasets hosted on the U.S. Department of Education website(retrivable via links provided above). Developers can also use API calls to retrieve the same datasets.
+
+	The College Scorecard API is a GET API that lives at http://api.data.gov/ed/collegescorecard/
+	The endpoint for querying all data is /v1/schools
+	The basic structure of an API call is year.dev-category.dev-friendly-variable-name.
+		* The year may be any year of data available (for this analysis: 2017), or use the word latest to get the most recent data available from the API. Using the "latest" key will allow your application to access the new data as soon as it is released.
+		* The school category has no year.
+		* id, ope6_id, ope8_id and location have no category or year.
 
 
 ## Project Plan
