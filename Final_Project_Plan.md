@@ -149,7 +149,7 @@ Both College Scorecard Data and Post-school Earnings will be used separately and
 
 ### Human Centered Design Considerations
 
-College admission process is known to be prune to bias, and currently all the final admission decisions are still made by human with potential machine generated suggestions. I want to use this data to explore the implications of bias in these decisions and how that affect post-school earnings on the school, state and region level. The subject matter of college education is centered around human and have many human centered implications.
+College admission process is known to be prone to bias, and currently all the final admission decisions are still made by human with potential machine generated suggestions. I want to use this data to explore the implications of bias in these decisions and how that affect post-school earnings on the school, state and region level. The subject matter of college education is centered around human and have many human centered implications.
 
 ### Unknowns and Dependencies
 
